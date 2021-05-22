@@ -1,5 +1,5 @@
-{% set version = "0.1.0" %}
-{% set sha256 = "8165e2c7d9f397a414bc4374807022d83d9fab5a5d89ba743b4dae6f2e6735d6" %}
+{% set version = "0.1.1" %}
+{% set sha256 = "ca5ac491672c20672cbd4d6316b0fdb9aeaf06983f1bf3a886eb0999c24dcbde" %}
 
 package:
   name: ipyx

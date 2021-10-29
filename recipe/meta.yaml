@@ -25,6 +25,7 @@ requirements:
   run:
     - python >=3.6
     - ipywidgets >=7.0.0
+    - ipycytoscape
 
 test:
   imports:

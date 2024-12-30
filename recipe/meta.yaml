@@ -6,28 +6,30 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/i/ipyx/ipyx-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/i/ipyx/ipyx-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - nodejs
     - yarn
     - jupyterlab =3
     - jupyter-packaging
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - ipywidgets >=7.0.0
     - ipycytoscape
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - ipyx
   commands:
